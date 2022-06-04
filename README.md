@@ -1,4 +1,4 @@
-# Shopping cart
+# Shopandco
 
 Création d'un shop ecommerce.
 
