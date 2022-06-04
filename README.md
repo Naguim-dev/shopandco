@@ -1,12 +1,8 @@
 # Shopping cart
 
-Création d'un shopping cart.
+Création d'un shop ecommerce.
 
 ## Environnement de développement / Dev environment
-
-### Accés dépot gitlab (ssh) / Access gitlab
-
-- ssh -T git@gitlab.com
 
 ### Pré-requis / Requirements
 
