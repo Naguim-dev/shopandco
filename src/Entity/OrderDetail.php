@@ -14,7 +14,7 @@ class OrderDetail
     /**
      * @ORM\Column(type="integer")
      */
-    private $quanity;
+    private $quantity;
 
     /**
      * @ORM\Column(type="integer")
@@ -36,14 +36,14 @@ class OrderDetail
     private $product;
 
 
-    public function getQuanity(): ?int
+    public function getQuantity(): ?int
     {
-        return $this->quanity;
+        return $this->quantity;
     }
 
-    public function setQuanity(int $quanity): self
+    public function setQuantity(int $quantity): self
     {
-        $this->quanity = $quanity;
+        $this->quantity = $quantity;
 
         return $this;
     }
