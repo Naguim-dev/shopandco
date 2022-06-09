@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Order;
 use App\Entity\Traits\Timestampable;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -134,7 +135,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @see PasswordAuthenticatedUserInterface
      */
-    public function getPassword(): string
+    public function getPassword(): ?string
     {
         return $this->password;
     }
