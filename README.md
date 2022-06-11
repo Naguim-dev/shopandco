@@ -1,4 +1,4 @@
-# Shopandco
+# Shopandcoqs
 
 Création d'un shop ecommerce.
 
