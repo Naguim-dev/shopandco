@@ -1,4 +1,4 @@
-# Shopandco
+# Shopandcoqs
 
 Création d'un shop ecommerce.
 
@@ -11,6 +11,7 @@ Création d'un shop ecommerce.
 - Symfony CLI
 - Docker
 - Docker-compose
+- node.js and npm
 
 Vous pouvez vérifier les pré-requis (sauf Docker et Docker-compose) avec la commande suivante (de la CLI Symfony) / You can verify requirements (except Docker and Docker-compose) with command (Symfony CLI):
 
@@ -22,6 +23,8 @@ symfony check:requirements
 
 ```bash
 composer install
+npm install
+npm run build
 docker-compose up -d
 symfony serve -d
 ```
