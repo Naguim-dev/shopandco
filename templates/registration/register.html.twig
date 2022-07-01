@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire de connexion
+{% endblock %}
+
+{% block body %}
+
+
+<div class="page-wrapper">
+	<main class="main bg-light">
+		<div class="container-fluid">
+			<div class="form-box mt-5">
+				<div class="row justify-content-center mb-5">
+					<img src="build/images/logo.png" alt="Molla Logo" width="105" height="25">
+				</div>
+				<div class="form-tab">
+					<ul class="nav nav-pills nav-fill" role="tablist">
+						<li class="nav-item">
+							S'inscrire
+						</li>
+					</ul>
+					<div
+						class="tab-content" id="tab-content-5">
+						<!-- .End .tab-pane -->
+						<form action="{{ path('app_register') }}" method="POST">
+							{{ form_start(registerForm) }}
+							<div class="form-group">
+								<label for="register-email">Email *</label>
+								{{ form_widget(registerForm.email) }}
+							</div>
+							<div class="form-group">
+								<label for="register-password">Mot de passe *</label>
+								{{ form_widget(registerForm.plainPassword) }}
+							</div>
+							<div class="form-group">
+								<label for="register-lastname">Nom *</label>
+								{{ form_widget(registerForm.lastname) }}
+							</div>
+							<div class="form-group">
+								<label for="register-firstname">Prénom *</label>
+								{{ form_widget(registerForm.firstname) }}
+							</div>
+							<div class="form-group">
+								<label for="register-address">Votre adresse *</label>
+								{{ form_widget(registerForm.address) }}
+							</div>
+							<div class="form-group">
+								<label for="register-zipcode">Votre code postal *</label>
+								{{ form_widget(registerForm.zipcode) }}
+							</div>
+							<div class="form-group">
+								<label for="register-city">Votre ville *</label>
+								{{ form_widget(registerForm.city) }}
+							</div>
+							<div class="custom-control custom-checkbox">
+								<label for="register-policy">En m'inscrivant à ce site, j'accepte...</label>
+								{{ form_widget(registerForm.RGPDConsent) }}
+							</div>
+							<!-- End .form-group -->
+
+							<div class="form-footer">
+								<button type="submit" class="btn btn-outline-primary-2">
+									<span>ENVOYER</span>
+									<i class="icon-long-arrow-right"></i>
+								</button>
+								<!-- End .custom-checkbox -->
+							</div>
+							{{ form_end(registerForm) }}
+							<!-- End .form-footer -->
+						</form>
+						<div class="form-choice">
+							<p class="text-center">or sign in with</p>
+							<div class="row">
+								<div class="col-sm-6">
+									<a href="#" class="btn btn-login btn-g">
+										<i class="icon-google"></i>
+										Login With Google
+									</a>
+								</div>
+								<!-- End .col-6 -->
+								<div class="col-sm-6">
+									<a href="#" class="btn btn-login  btn-f">
+										<i class="icon-facebook-f"></i>
+										Login With Facebook
+									</a>
+								</div>
+								<!-- End .col-6 -->
+							</div>
+							<!-- End .row -->
+						</div>
+						<!-- End .form-choice -->
+					</div>
+					<!-- .End .tab-pane -->
+				</div>
+				<!-- End .tab-content -->
+			</div>
+			<!-- End .form-tab -->
+		</div>
+	</main>
+</div></div {% endblock %}
