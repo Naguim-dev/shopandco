@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Traits\Slug;
 use App\Entity\Traits\Timestampable;
 use App\Repository\ProductRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -15,6 +16,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Product
 {
     use Timestampable;
+    use Slug;
 
     /**
      * @ORM\Id
