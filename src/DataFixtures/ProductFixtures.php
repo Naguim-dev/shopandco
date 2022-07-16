@@ -9,7 +9,7 @@ use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Faker;
 
-class ProductFixtures extends Fixture
+class ProductFixtures extends Fixture implements DependentFixtureInterface
 {
     private $counter;
 
@@ -34,7 +34,7 @@ class ProductFixtures extends Fixture
             $product->setStock($faker->numberBetween(0, 15));
 
             //Searching categories Reference
-            $category = $this->getReference('cat-' . rand(1, 7));
+            $category = $this->getReference('cat-' . rand(1, 6));
             $product->setCategory($category);
 
             $this->setReference('prod-' . $prod, $product);
@@ -44,5 +44,12 @@ class ProductFixtures extends Fixture
         // $manager->persist($product);
 
         $manager->flush();
+    }
+
+    public function getDependencies(): array
+    {
+        return [
+            CategoryFixtures::class
+        ];
     }
 }
