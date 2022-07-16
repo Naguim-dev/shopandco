@@ -21,15 +21,13 @@ class CategoryFixtures extends Fixture
 
         $parent = $this->createCategory('Homme', null, $manager);
 
-        $this->createCategory('Chaussures', $parent, $manager);
+        $this->createCategory('Chemises', $parent, $manager);
         $this->createCategory('T-shirts', $parent, $manager);
-        $this->createCategory('Jeans', $parent, $manager);
 
         $parent = $this->createCategory('Femme', null, $manager);
 
         $this->createCategory('Chaussures', $parent, $manager);
         $this->createCategory('Robes', $parent, $manager);
-        $this->createCategory('Sacs', $parent, $manager);
 
         $manager->flush();
     }

@@ -1,0 +1,1 @@
+SELECT * FROM product LEFT JOIN category ON product.category_id = category.id WHERE category.slug = 'femme' AND category.parent_id IS NULL 

@@ -29,6 +29,11 @@ class Category
     private $name;
 
     /**
+     * @ORM\Column(type="integer",)
+     */
+    private $categoryOrder;
+
+    /**
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="categories")
      * @ORM\JoinColumn(onDelete="CASCADE")
      */
@@ -63,6 +68,18 @@ class Category
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getCategoryOrder(): ?int
+    {
+        return $this->categoryOrder;
+    }
+
+    public function setCategoryOrder(string $categoryOrder): self
+    {
+        $this->categoryOrder = $categoryOrder;
 
         return $this;
     }
