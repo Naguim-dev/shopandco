@@ -2,12 +2,9 @@ version: '3'
 
 services:
   ###> doctrine/doctrine-bundle ###
-  mailhog:
-    image: mailhog/mailhog:latest
-    restart: always
-    ports:
-      - 1025:1025
-      - 8025:8025
+  mailer:
+    image: schickling/mailcatcher
+    ports: [ 1025, 1080 ]
   database:
     image: library/mysql:8.0
     environment:

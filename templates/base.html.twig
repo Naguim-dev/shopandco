@@ -8,7 +8,7 @@
 			{% endblock %}
 		</title>
 		{# Run `composer require symfony/webpack-encore-bundle`
-										           and uncomment the following Encore helpers to start using Symfony UX #}
+																           and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
 			{{ encore_entry_link_tags('app') }}
 		{% endblock %}
@@ -19,6 +19,17 @@
 	</head>
 	<body>
 		{# {% include "base/nav.html.twig" %} #}
+		{% if app.user and app.user.isVerified == false %}
+			<div class="alert alert-warning alert-dismissible" role="alert">
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				<div class="alert-message">
+					<strong>Votre inscription n'est pas terminé. Pour finaliser votre inscription, un email vous a été envoyé pour activer votre compte.</strong>,
+					<a href="{{ path('resend_verif') }}">renvoyer le lien d'activation</a>
+				</div>
+			</div>
+		{% endif %}
+
+		{% include "_partials/_flash.html.twig" %}
 		{% block body %}{% endblock %}
 		{# {% include "base/footer.html.twig" %} #}
 	</body>

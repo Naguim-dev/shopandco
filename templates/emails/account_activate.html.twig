@@ -1,0 +1,7 @@
+<h1>Activation de compte</h1>
+<p>Bonjour{{ user.firstName }}</p>
+<p>Votre inscription sur le site ShopandCo nécessite d'être activé. Veuillez cliquer sur le lien ci-dessous :</p>
+<p>
+	<a href="{{ absolute_url(path('verify_user', {token: token})) }}">{{ absolute_url(path('verify_user', {token: token})) }}<</a>
+</p>
+<p>Ce lien est valable 2 heures</p>
