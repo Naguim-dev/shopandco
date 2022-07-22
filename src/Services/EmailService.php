@@ -26,7 +26,7 @@ class EmailService
             ->from($from)
             ->to($to)
             ->subject($subject)
-            ->htmlTemplate("emails/$template.html.twig")
+            ->htmlTemplate("reset_password/$template.html.twig")
             ->context($context);
 
         // On envoie l'email
