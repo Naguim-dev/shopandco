@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réinitialisation du mot de passe
+{% endblock %}
+
+{% block body %}
+
+
+<div class="page-wrapper">
+	<main class="main bg-light">
+		<div class="container-fluid">
+			<div class="form-box mt-5">
+				<div class="row justify-content-center mb-5">
+					<img src="build/images/logo.png" alt="Molla Logo" width="105" height="25">
+				</div>
+				<div class="form-tab">
+					<ul class="nav nav-pills nav-fill" role="tablist">
+						<li class="nav-item">Réinitialiser votre mot de passe
+						</li>
+					</ul>
+					<div class="tab-content" id="tab-content-5">
+						<div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+							<form method="POST">
+								{{ form_start(requestPassForm) }}
+								<div class="form-group">
+									<label>Votre adresse Email *</label>
+									{{ form_row(requestPassForm.email) }}
+									<div>
+										<p>
+											<small>*Renseigner votre adresse email et nous vous enverrons un lien pour réinitialiser votre mot de passe.</small>
+										</p>
+									</div>
+								</div>
+								<!-- End .form-group -->
+
+								<div class="form-footer">
+									<button type="submit" class="btn btn-outline-primary-2">
+										<span>valider</span>
+										<i class="icon-long-arrow-right"></i>
+									</button>
+									<!-- End .custom-checkbox -->
+								</div>
+								<!-- End .form-footer -->
+								{{ form_end(requestPassForm) }}
+							</form>
+							<!-- End .form-choice -->
+						</div>
+						<!-- .End .tab-pane -->
+					</div>
+					<!-- End .tab-content -->
+				</div>
+				<!-- End .form-tab -->
+			</div>
+		</main>
+	</div>
+</div {% endblock %}
